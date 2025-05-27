@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Pedidos - House Delivery</title>
+    <link rel="stylesheet" href="/Index/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+          background-color: black;
+          padding: 10px;
+      }
+      nav ul {
+          list-style-type: none;
+          padding: 0;
+      }
+      nav ul li {
+          display: inline;
+          margin-right: 20px;
+      }
+      nav ul li a {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+      }
+      .titulo {
+          color: orange;
+          display: inline-block;
+          margin-right: 50px;
+      }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .btn-update {
+            background-color: orange;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn-update:hover {
+            background-color: darkorange;
+        }
+        .btn-danger {
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn-danger:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1 class="titulo">HOUSE DELIVERY</h1>
+        <ul>
+            <li><a href="misProductos.html">Mis Productos</a></li>
+            <li><a href="gestionPedidos.html">Gestionar Pedidos</a></li>
+            <li><a href="gestionRepartidores.html">Gestionar Repartidores</a></li>
+            <li><a href="cerrarSesion.html">Cerrar Sesión</a></li>
+        </ul>
+      </nav>
+<div class="container">
+    <h1>Gestión de Pedidos</h1>
+
+    <!-- Tabla para mostrar los pedidos -->
+    <table>
+        <thead>
+            <tr>
+                <th>ID del Pedido</th>
+                <th>Nombre del Cliente</th>
+                <th>Productos Solicitados</th>
+                <th>Total</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se mostrarían los pedidos desde el backend -->
+            <tr>
+                <td>101</td>
+                <td>Juan Pérez</td>
+                <td>Pizza Margherita, Coca-Cola</td>
+                <td>$15.00</td>
+                <td>Pendiente</td>
+                <td>
+                    <button class="btn-update">Actualizar Estado</button>
+                    <button class="btn-danger">Eliminar Pedido</button>
+                </td>
+            </tr>
+            <!-- Repite la estructura de la fila para otros pedidos -->
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

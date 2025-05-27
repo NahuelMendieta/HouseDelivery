@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+    <link rel="stylesheet" href="style.css">
+    <div>
+        <style> 
+        nav {
+            background-color: black;
+        }
+        li a {
+            color: white;
+        }
+        .titulo {
+            color: orange;
+            }
+</style>
+    <nav>
+        <h1 class="titulo">HOUSE DELIVERY</h1>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="contactanos.html">Contactanos</a></li>
+            <li><a href="iniciar-sesion.html">Iniciar Sesión</a></li>
+        </ul>
+    </nav>
+    </head>
+</head>
+<body>
+    <link rel="stylesheet" href="styleregister.css">
+    <div class="register-container">
+        <h1>Registrar</h1>
+        <form id="register-form">
+            <div class="form-group">
+                <label for="new-username">Nombre de Usuario:</label>
+                <input type="text" id="new-username" name="new-username" required>
+            </div>
+            <div class="form-group">
+                <label for="new-password">Contraseña:</label>
+                <input type="password" id="new-password" name="new-password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirmar Contraseña:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit">Registrar</button>
+        </form>
+        <p>¿Ya tienes una cuenta? <a href="iniciar-sesion.html" id="login-link">Iniciar Sesión</a></p>
+    </div>
+    <script>
+        document.getElementById('login-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            loadPage('iniciar-sesion.html');
+        });
+
+        function loadPage(page) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', page, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.body.innerHTML = xhr.responseText;
+                    setupAuthForms();
+                }
+            };
+            xhr.send();
+        }
+
+        function setupAuthForms() {
+            var loginLink = document.getElementById('login-link');
+            if (loginLink) {
+                loginLink.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    loadPage('iniciar-sesion.html');
+                });
+            }
+        }
+    </script>
+</body>
+</html>
+

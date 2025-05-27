@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos Asignados - Repartidor</title>
+    <link rel="stylesheet" href="/Index/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+          background-color: black;
+          padding: 10px;
+      }
+      nav ul {
+          list-style-type: none;
+          padding: 0;
+      }
+      nav ul li {
+          display: inline;
+          margin-right: 20px;
+      }
+      nav ul li a {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+      }
+      .titulo {
+          color: orange;
+          display: inline-block;
+          margin-right: 50px;
+      }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        td {
+            background-color: #fff;
+            color: #666;
+        }
+        .btn-accept, .btn-decline {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .btn-accept {
+            background-color: green;
+            color: white;
+        }
+        .btn-accept:hover {
+            background-color: darkgreen;
+        }
+        .btn-decline {
+            background-color: red;
+            color: white;
+        }
+        .btn-decline:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1 class="titulo">HOUSE DELIVERY</h1>
+        <ul>
+            <li><a href="misPedidos.html">Gestionar Pedidos</a></li>
+            <li><a href="cerrarSesion.html">Cerrar Sesión</a></li>
+        </ul>
+      </nav>
+
+<div class="container">
+    <h1>Pedidos Asignados</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID del Pedido</th>
+                <th>Cliente</th>
+                <th>Dirección</th>
+                <th>Productos</th>
+                <th>Total</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>#001</td>
+                <td>Juan Pérez</td>
+                <td>Calle Falsa 123, Ciudad</td>
+                <td>Pizza Margherita, Coca-Cola</td>
+                <td>$10.00</td>
+                <td>
+                    <button class="btn-accept">Aceptar</button>
+                    <button class="btn-decline">Rechazar</button>
+                </td>
+            </tr>
+            <tr>
+                <td>#002</td>
+                <td>María Gómez</td>
+                <td>Avenida Siempre Viva 742, Ciudad</td>
+                <td>Hamburguesa Clásica, Jugo de Naranja</td>
+                <td>$10.00</td>
+                <td>
+                    <button class="btn-accept">Aceptar</button>
+                    <button class="btn-decline">Rechazar</button>
+                </td>
+            </tr>
+            <!-- Agrega más filas de pedidos aquí -->
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

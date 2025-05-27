@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Pedidos - House Delivery</title>
+    <link rel="stylesheet" href="/Index/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+          background-color: black;
+          padding: 10px;
+      }
+      nav ul {
+          list-style-type: none;
+          padding: 0;
+      }
+      nav ul li {
+          display: inline;
+          margin-right: 20px;
+      }
+      nav ul li a {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+      }
+      .titulo {
+          color: orange;
+          display: inline-block;
+          margin-right: 50px;
+      }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        select, input[type="text"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 6px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: orange;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1 class="titulo">HOUSE DELIVERY</h1>
+        <ul>
+            <li><a href="misProductos.html">Mis Productos</a></li>
+            <li><a href="gestionPedidos.html">Gestionar Pedidos</a></li>
+            <li><a href="gestionRepartidores.html">Gestionar Repartidores</a></li>
+            <li><a href="cerrarSesion.html">Cerrar Sesión</a></li>
+        </ul>
+      </nav>
+<div class="container">
+    <h1>Gestión de Pedidos</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Número de Pedido</th>
+                <th>Cliente</th>
+                <th>Productos</th>
+                <th>Total</th>
+                <th>Estado</th>
+                <th>Asignar Repartidor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se pueden listar los pedidos desde el backend -->
+            <tr>
+                <td>1</td>
+                <td>Cliente 1</td>
+                <td>Pizza Margherita (2)</td>
+                <td>$20.00</td>
+                <td>En preparación</td>
+                <td>
+                    <form action="/asignar-repartidor" method="POST">
+                        <div class="form-group">
+                            <label for="repartidor1">Seleccionar Repartidor:</label>
+                            <select name="repartidor" id="repartidor1">
+                                <option value="repartidor1">Repartidor 1</option>
+                                <option value="repartidor2">Repartidor 2</option>
+                                <option value="repartidor3">Repartidor 3</option>
+                            </select>
+                        </div>
+                        <input type="hidden" name="pedidoId" value="1">
+                        <input type="submit" value="Asignar">
+                    </form>
+                </td>
+            </tr>
+            <!-- Repite la estructura de la fila para otros pedidos -->
+        </tbody>
+    </table>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Productos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/Index/style.css">
+  <style> 
+      body {
+          font-family: Arial, sans-serif;
+      }
+      nav {
+          background-color: black;
+          padding: 10px;
+      }
+      nav ul {
+          list-style-type: none;
+          padding: 0;
+      }
+      nav ul li {
+          display: inline;
+          margin-right: 20px;
+      }
+      nav ul li a {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+      }
+      .titulo {
+          color: orange;
+          display: inline-block;
+          margin-right: 50px;
+      }
+      .menu-table {
+          width: 80%;
+          margin: 20px auto;
+          border-collapse: collapse;
+      }
+      .menu-table th, .menu-table td {
+          border: 1px solid #ddd;
+          padding: 10px;
+          text-align: center;
+      }
+      .menu-table th {
+          background-color: #f2f2f2;
+          color: black;
+      }
+      .menu-table td {
+          background-color: #fff;
+      }
+      .menu-table tr:hover {
+          background-color: #f5f5f5;
+      }
+      .buy-button {
+          background-color: orange;
+          color: white;
+          padding: 8px 16px;
+          border: none;
+          cursor: pointer;
+      }
+      .buy-button:hover {
+          background-color: darkorange;
+      }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1 class="titulo">HOUSE DELIVERY</h1>
+    <ul>
+        <li><a href="inicioCliente.html">Productos</a></li>
+        <li><a href="misPedidos.html">Mis Pedidos</a></li>
+        <li><a href="cerrarSesion.html">Cerrar Sesión</a></li>
+    </ul>
+  </nav>
+
+  <h2 style="text-align:center;">Menú de House Delivery</h2>
+  
+  <table class="menu-table">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th>Comprar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Pizza Margherita</td>
+        <td>Pizza clásica con salsa de tomate, mozzarella y albahaca.</td>
+        <td>$10.00</td>
+        <td><button class="buy-button">Añadir al carrito</button></td>
+      </tr>
+      <tr>
+        <td>Hamburguesa Clásica</td>
+        <td>Hamburguesa con carne de res, lechuga, tomate y queso cheddar.</td>
+        <td>$8.00</td>
+        <td><button class="buy-button">Añadir al carrito</button></td>
+      </tr>
+      <tr>
+        <td>Ensalada César</td>
+        <td>Ensalada con lechuga, crutones, parmesano y aderezo César.</td>
+        <td>$7.00</td>
+        <td><button class="buy-button">Añadir al carrito</button></td>
+      </tr>
+      <tr>
+        <td>Coca-Cola</td>
+        <td>Bebida gaseosa de 500ml.</td>
+        <td>$2.00</td>
+        <td><button class="buy-button">Añadir al carrito</button></td>
+      </tr>
+      <tr>
+        <td>Promoción 2x1</td>
+        <td>Compra dos pizzas por el precio de una.</td>
+        <td>$15.00</td>
+        <td><button class="buy-button">Añadir al carrito</button></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
